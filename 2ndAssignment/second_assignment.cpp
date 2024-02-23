@@ -45,7 +45,7 @@ void get_user_input(std::string& data_file,
   std::cout<<"Do you want to calculate the mean and standard deviations for a specific year? (y/n): "<<std::endl;
   while(!(std::cin>>user_input) || user_input != 'y' && user_input != 'n')
   {
-    std::cout<< "Invalid input. Please choose either 'y' or 'n': " << std::endl;
+    std::cout<<"Invalid input. Please choose either 'y' or 'n': "<<std::endl;
     std::cin.clear();  // Clear the error flag
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  // Discard all characters of invalid input
   }
@@ -63,7 +63,7 @@ void get_user_input(std::string& data_file,
   std::cout<<"Do you want to sort the list by course name or course number? (name/number): "<<std::endl;
   while(!(std::cin>>input_sort) || input_sort != "name" && input_sort != "number")
   {
-    std::cout<< "Invalid input. Please choose either 'name' or 'number': " << std::endl;
+    std::cout<<"Invalid input. Please choose either 'name' or 'number': "<<std::endl;
     std::cin.clear();  // Clear the error flag
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  // Discard all characters of invalid input
   }
@@ -180,6 +180,7 @@ bool compareByTopicTitle(const std::string& element_a, const std::string& elemen
   // Compare course names alphbetically
   return titleA < titleB;
 }
+
 // Main function
 
 int main()
